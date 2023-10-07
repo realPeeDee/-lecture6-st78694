@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id="button1">Animation 1</button>
+    <button id="button2">Animation 2</button>
+    <button id="button3">Animation 3</button>
+
+    <div id="image-container">
+        <img src="image1.png" alt="Image 1" id="image1">
+        <img src="image2.png" alt="Image 2" id="image2">
+        <img src="image4.png" alt="Image 3" id="image3">
+    </div>
+
+    <script>
+        function animateImage1() {
+            $("#image1").animate({
+                width: "200px",
+                height: "200px",
+                opacity: 0.5
+            }, 1000);
+        }
+
+        function animateImage2() {
+            $("#image2").slideUp(1000).slideDown(1000);
+        }
+
+        function animateImage3() {
+            $("#image3").fadeOut(500).fadeIn(500);
+        }
+
+        $("#button1").click(animateImage1);
+        $("#button2").click(animateImage2);
+        $("#button3").click(animateImage3);
+    </script>
+</body>
+</html>
